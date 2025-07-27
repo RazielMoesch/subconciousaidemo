@@ -143,22 +143,64 @@ const Demo = () => {
                 </div>
             )}
 
+            
             {tab === "generate-result" && (
-                <div className="result-container">
-                    <button onClick={() => handleGenerateAnalysis()}>Generate Analysis</button>
 
-                    <div className="swot-cards-wrapper">
-                        <div className="swot-card"><h3>Strengths</h3><p>{strengths}</p></div>
-                        <div className="swot-card"><h3>Weaknesses</h3><p>{weaknesses}</p></div>
-                        <div className="swot-card"><h3>Opportunities</h3><p>{opportunities}</p></div>
-                        <div className="swot-card"><h3>Threats</h3><p>{threats}</p></div>
-                        <div className="swot-card"><h3>Market Positioning</h3><p>{marketPositioning}</p></div>
-                        <div className="swot-card"><h3>Buyer Persona</h3><p>{buyerPersona}</p></div>
-                        <div className="swot-card"><h3>Investment Opportunities</h3><p>{investmentOpportunities}</p></div>
-                        <div className="swot-card"><h3>Channels & Distribution</h3><p>{channelsDistribution}</p></div>
+                    <div className="result-container">
+                        <button onClick={() => handleGenerateAnalysis()}>Generate Analysis</button>
+
+                        <div className="swot-cards-wrapper">
+                            <div className="swot-card">
+                                <h3>Strengths</h3>
+                                {strengths?.split(/\d+\.\s*/).filter(Boolean).map((item, index) => (
+                                    <p key={index}>{index + 1}. {item.trim()}</p>
+                                ))}
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Weaknesses</h3>
+                                {weaknesses?.split(/\d+\.\s*/).filter(Boolean).map((item, index) => (
+                                    <p key={index}>{index + 1}. {item.trim()}</p>
+                                ))}
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Opportunities</h3>
+                                {opportunities?.split(/\d+\.\s*/).filter(Boolean).map((item, index) => (
+                                    <p key={index}>{index + 1}. {item.trim()}</p>
+                                ))}
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Threats</h3>
+                                {threats?.split(/\d+\.\s*/).filter(Boolean).map((item, index) => (
+                                    <p key={index}>{index + 1}. {item.trim()}</p>
+                                ))}
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Market Positioning</h3>
+                                <p>{marketPositioning}</p>
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Buyer Persona</h3>
+                                <p>{buyerPersona}</p>
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Investment Opportunities</h3>
+                                <p>{investmentOpportunities}</p>
+                            </div>
+
+                            <div className="swot-card">
+                                <h3>Channels & Distribution</h3>
+                                <p>{channelsDistribution}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+
 
         </div>
     );
