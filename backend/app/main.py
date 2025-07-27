@@ -9,7 +9,7 @@ from fastapi.responses import JSONResponse
 
 
 load_dotenv()
-api_key = os.environ("OPEN_API_KEY")
+api_key = api_key = os.environ["OPEN_API_KEY"]
 client = OpenAI(api_key=api_key)
 
 app = FastAPI()
