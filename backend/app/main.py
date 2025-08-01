@@ -92,21 +92,6 @@ Segment: {data.segment}
 Objective: {data.objective}
 <end>
 
-Example:
-Description: Face ID glasses for Alzheimer’s patients to recognize family.
-Segment: Caregivers.
-Objective: Enhance neuroplasticity for memory recovery.
-Response:
-<Marketing OKRs>: 1. Sell 300 units in Q1 via caregiver networks. 2. Partner with 5 care facilities by Q2. 3. Increase online engagement by 20% by Q3.
-<Strengths>: 1. Facial recognition reduces social awkwardness for memory-impaired users. 2. Supports neuroplasticity through identity reinforcement. 3. Lightweight, comfortable glasses design for elderly.
-<Weaknesses>: 1. High cost may deter some caregivers. 2. Limited battery life for daily use. 3. Requires initial setup by caregivers.
-<Opportunities>: 1. Growing demand for dementia aids. 2. Collaboration with Alzheimer’s organizations. 3. Integration with telehealth for caregiver support.
-<Threats>: 1. Privacy concerns over facial data. 2. Competition from other assistive wearables. 3. Regulatory compliance challenges.
-<Market Positioning>: Premium assistive glasses with unique facial recognition, appealing to caregivers seeking to reduce social discomfort, though priced above basic aids.
-<Buyer Persona>: Caregivers aged 40-60, tech-savvy, prioritize patient dignity and memory support, concerned about ease of use and privacy.
-<Investment Opportunities>: Invest in R&D to lower costs and improve battery life, plus targeted caregiver marketing.
-<Channels & Distribution>: E-commerce with setup guides, partnerships with care facilities, and medical supply distributors.
-<END>
 """
 
     response = client.chat.completions.create(
